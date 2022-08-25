@@ -28,11 +28,11 @@ public class MenuUIHandler : MonoBehaviour
     }
     public void Exit()
     {
-#if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-#else
-        Application.Quit();
-#endif
+        #if UNITY_EDITOR
+           EditorApplication.ExitPlaymode();
+        #else 
+           Application.Quit();
+        #endif
 
     }
 }
